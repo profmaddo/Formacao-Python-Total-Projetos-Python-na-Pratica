@@ -2,8 +2,16 @@
 
 def calcularIdade(ano, mes, dia):
 
-    print(f'Data de Nascimento, Dia {dia}, Mês {mes}, Ano {ano}')
-    print(f'Data de Nascimento, {dia}/{mes}/{ano}')
+    import datetime as dt
+
+    dataAtual = dt.datetime.now().date()
+
+    dataNascimento = dt.date(ano,mes,dia)
+
+
+
+    print(f'Data de Nascimento, {dataNascimento}')
+    print(f'Data Atual, {dataAtual}')
 
 if __name__ == '__main__':
     calcularIdade(2000,10,2)
